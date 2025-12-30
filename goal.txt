@@ -3,8 +3,7 @@
 
 # 📄 `goal.txt` (Execution & Milestones)
 
-> **This file is for YOU — not recruiters.**  
-> Treat it like a checklist + compass.
+
 
 ```text
 Project: NodeScope
@@ -21,15 +20,6 @@ Build a single-binary Go CLI that:
 - Explains why a node is slow
 - Works without agents or cloud services
 
-====================================
-NON-GOALS (IMPORTANT)
-====================================
-
-- No dashboards
-- No UI
-- No ML models
-- No Kubernetes-only assumptions
-- No long-running daemon (CLI-first)
 
 ====================================
 V1 MILESTONES
