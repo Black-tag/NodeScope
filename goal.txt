@@ -1,0 +1,108 @@
+
+---
+
+# 📄 `goal.txt` (Execution & Milestones)
+
+> **This file is for YOU — not recruiters.**  
+> Treat it like a checklist + compass.
+
+```text
+Project: NodeScope
+Goal: Build a production-grade Linux node diagnostics CLI
+Audience: Infra / SRE / AI infra engineers
+
+====================================
+PRIMARY OBJECTIVE
+====================================
+
+Build a single-binary Go CLI that:
+- Collects live Linux node metrics
+- Correlates CPU, memory, disk, and network health
+- Explains why a node is slow
+- Works without agents or cloud services
+
+====================================
+NON-GOALS (IMPORTANT)
+====================================
+
+- No dashboards
+- No UI
+- No ML models
+- No Kubernetes-only assumptions
+- No long-running daemon (CLI-first)
+
+====================================
+V1 MILESTONES
+====================================
+
+[ M1 ] CLI Foundation
+- Cobra / standard flag parsing
+- nodescope diagnose command
+- Structured output model
+- Graceful permission handling
+
+[ M2 ] CPU Metrics
+- /proc/stat parsing
+- Load average vs cores
+- Cgroup CPU quota & throttling
+- Steal time detection
+
+[ M3 ] Memory Metrics
+- /proc/meminfo
+- /proc/vmstat
+- Cgroup memory limits
+- Swap activity & reclaim rate
+
+[ M4 ] Disk Metrics
+- /proc/diskstats
+- IO wait %
+- Latency estimation
+- Queue depth signals
+
+[ M5 ] Network Metrics (Critical)
+- /proc/net/snmp
+- /proc/net/netstat
+- TCP retransmits
+- Packet drops
+- Socket state distribution
+
+[ M6 ] Correlation Engine
+- Rule-based diagnosis
+- Cross-metric reasoning
+- Severity scoring (OK / DEGRADED / CRITICAL)
+
+[ M7 ] Output
+- Human-readable CLI output
+- JSON output flag
+- Clear diagnostic explanations
+
+====================================
+OPTIONAL / STRETCH
+====================================
+
+- Prometheus exporter mode
+- Docker image
+- GitHub Actions demo
+- Cost waste estimation
+- Historical diff mode (2-sample)
+
+====================================
+QUALITY BAR
+====================================
+
+- No shelling out to external commands
+- Reads directly from kernel interfaces
+- Clear error messages
+- Deterministic output
+- Easy to reason about code
+
+====================================
+SUCCESS CRITERIA
+====================================
+
+- Can diagnose a throttled container
+- Can detect network-induced latency
+- Can explain node slowness in plain English
+- Readable by infra engineers reviewing code
+- Resume-worthy, production-quality repo
+
